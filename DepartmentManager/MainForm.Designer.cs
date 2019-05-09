@@ -86,6 +86,7 @@
             this.groupButton.TabIndex = 3;
             this.groupButton.Text = "Группы";
             this.groupButton.UseVisualStyleBackColor = true;
+            this.groupButton.Click += new System.EventHandler(this.GroupButton_Click);
             // 
             // studentButton
             // 

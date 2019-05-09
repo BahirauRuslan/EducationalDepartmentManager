@@ -41,5 +41,10 @@ namespace DepartmentManager
         {
             this.ShowDialogForm(new PlanContentForm());
         }
+
+        private void GroupButton_Click(object sender, EventArgs e)
+        {
+            this.ShowDialogForm(new GroupsForm());
+        }
     }
 }
