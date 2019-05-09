@@ -62,7 +62,7 @@
             this.planButton.Name = "planButton";
             this.planButton.Size = new System.Drawing.Size(281, 38);
             this.planButton.TabIndex = 1;
-            this.planButton.Text = "Планы";
+            this.planButton.Text = "Специальности";
             this.planButton.UseVisualStyleBackColor = true;
             this.planButton.Click += new System.EventHandler(this.PlanButton_Click);
             // 
@@ -75,6 +75,7 @@
             this.planContentButton.TabIndex = 2;
             this.planContentButton.Text = "Содержание плана";
             this.planContentButton.UseVisualStyleBackColor = true;
+            this.planContentButton.Click += new System.EventHandler(this.PlanContentButton_Click);
             // 
             // groupButton
             // 

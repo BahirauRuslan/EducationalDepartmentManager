@@ -57,6 +57,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanContentForm.Designer.cs">
+      <DependentUpon>PlanContentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlansForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanContentForm.resx">
+      <DependentUpon>PlanContentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlansForm.resx">
       <DependentUpon>PlansForm.cs</DependentUpon>
