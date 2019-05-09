@@ -46,5 +46,10 @@ namespace DepartmentManager
         {
             this.ShowDialogForm(new GroupsForm());
         }
+
+        private void StudentButton_Click(object sender, EventArgs e)
+        {
+            this.ShowDialogForm(new StudentsForm());
+        }
     }
 }
