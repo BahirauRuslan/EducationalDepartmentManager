@@ -8,10 +8,10 @@
         private System.ComponentModel.IContainer components = null;
 
         private EducationalDepartmentDataSet educationalDepartmentDataSet;
-        private System.Windows.Forms.BindingSource planContentBindingSource;
-        private EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter planContentTableAdapter;
+        private System.Windows.Forms.BindingSource plansBindingSource;
+        private EducationalDepartmentDataSetTableAdapters.PlansTableAdapter plansTableAdapter;
         private EducationalDepartmentDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator planContentBindingNavigator;
+        private System.Windows.Forms.BindingNavigator plansBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -23,11 +23,13 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton planContentBindingNavigatorSaveItem;
-        private EducationalDepartmentDataSetTableAdapters.PlansTableAdapter plansTableAdapter;
-        private System.Windows.Forms.DataGridView planContentDataGridView;
-        private System.Windows.Forms.BindingSource plansBindingSource;
+        private System.Windows.Forms.ToolStripButton plansBindingNavigatorSaveItem;
+        private System.Windows.Forms.ComboBox plansComboBox;
+        private EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter planContentTableAdapter;
+        private System.Windows.Forms.BindingSource planContentBindingSource;
         private EducationalDepartmentDataSetTableAdapters.SubjectsTableAdapter subjectsTableAdapter;
+        private System.Windows.Forms.DataGridView planContentDataGridView;
+        private System.Windows.Forms.BindingSource plansBindingSource1;
         private System.Windows.Forms.BindingSource subjectsBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
@@ -61,39 +63,42 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanContentForm));
             this.educationalDepartmentDataSet = new DepartmentManager.EducationalDepartmentDataSet();
-            this.planContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.planContentTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter();
+            this.plansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.plansTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.PlansTableAdapter();
             this.tableAdapterManager = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.TableAdapterManager();
-            this.planContentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.planContentTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter();
+            this.subjectsTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.SubjectsTableAdapter();
+            this.plansBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.planContentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.planContentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.plansBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.plansComboBox = new System.Windows.Forms.ComboBox();
             this.planContentDataGridView = new System.Windows.Forms.DataGridView();
-            this.plansBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plansTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.PlansTableAdapter();
-            this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.subjectsTableAdapter = new DepartmentManager.EducationalDepartmentDataSetTableAdapters.SubjectsTableAdapter();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.plansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.subjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.educationalDepartmentDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingNavigator)).BeginInit();
-            this.planContentBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansBindingNavigator)).BeginInit();
+            this.plansBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,14 +107,14 @@
             this.educationalDepartmentDataSet.DataSetName = "EducationalDepartmentDataSet";
             this.educationalDepartmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // planContentBindingSource
+            // plansBindingSource
             // 
-            this.planContentBindingSource.DataMember = "PlanContent";
-            this.planContentBindingSource.DataSource = this.educationalDepartmentDataSet;
+            this.plansBindingSource.DataMember = "Plans";
+            this.plansBindingSource.DataSource = this.educationalDepartmentDataSet;
             // 
-            // planContentTableAdapter
+            // plansTableAdapter
             // 
-            this.planContentTableAdapter.ClearBeforeFill = true;
+            this.plansTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -122,13 +127,21 @@
             this.tableAdapterManager.SubjectsTableAdapter = this.subjectsTableAdapter;
             this.tableAdapterManager.UpdateOrder = DepartmentManager.EducationalDepartmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // planContentBindingNavigator
+            // planContentTableAdapter
             // 
-            this.planContentBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.planContentBindingNavigator.BindingSource = this.planContentBindingSource;
-            this.planContentBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.planContentBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.planContentBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.planContentTableAdapter.ClearBeforeFill = true;
+            // 
+            // subjectsTableAdapter
+            // 
+            this.subjectsTableAdapter.ClearBeforeFill = true;
+            // 
+            // plansBindingNavigator
+            // 
+            this.plansBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.plansBindingNavigator.BindingSource = this.planContentBindingSource;
+            this.plansBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.plansBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.plansBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -140,17 +153,47 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.planContentBindingNavigatorSaveItem});
-            this.planContentBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.planContentBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.planContentBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.planContentBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.planContentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.planContentBindingNavigator.Name = "planContentBindingNavigator";
-            this.planContentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.planContentBindingNavigator.Size = new System.Drawing.Size(782, 25);
-            this.planContentBindingNavigator.TabIndex = 0;
-            this.planContentBindingNavigator.Text = "bindingNavigator1";
+            this.plansBindingNavigatorSaveItem});
+            this.plansBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.plansBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.plansBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.plansBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.plansBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.plansBindingNavigator.Name = "plansBindingNavigator";
+            this.plansBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.plansBindingNavigator.Size = new System.Drawing.Size(1023, 25);
+            this.plansBindingNavigator.TabIndex = 0;
+            this.plansBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // planContentBindingSource
+            // 
+            this.planContentBindingSource.DataMember = "FK_PlanContent_Plans";
+            this.planContentBindingSource.DataSource = this.plansBindingSource;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -184,17 +227,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -202,7 +238,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -211,40 +247,33 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem
+            // plansBindingNavigatorSaveItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.plansBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.plansBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("plansBindingNavigatorSaveItem.Image")));
+            this.plansBindingNavigatorSaveItem.Name = "plansBindingNavigatorSaveItem";
+            this.plansBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.plansBindingNavigatorSaveItem.Text = "Save Data";
+            this.plansBindingNavigatorSaveItem.Click += new System.EventHandler(this.PlansBindingNavigatorSaveItem_Click);
             // 
-            // bindingNavigatorDeleteItem
+            // plansComboBox
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // planContentBindingNavigatorSaveItem
-            // 
-            this.planContentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.planContentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("planContentBindingNavigatorSaveItem.Image")));
-            this.planContentBindingNavigatorSaveItem.Name = "planContentBindingNavigatorSaveItem";
-            this.planContentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.planContentBindingNavigatorSaveItem.Text = "Save Data";
-            this.planContentBindingNavigatorSaveItem.Click += new System.EventHandler(this.PlanContentBindingNavigatorSaveItem_Click_1);
+            this.plansComboBox.DataSource = this.plansBindingSource;
+            this.plansComboBox.DisplayMember = "Speciality";
+            this.plansComboBox.FormattingEnabled = true;
+            this.plansComboBox.Location = new System.Drawing.Point(775, 28);
+            this.plansComboBox.Name = "plansComboBox";
+            this.plansComboBox.Size = new System.Drawing.Size(236, 21);
+            this.plansComboBox.TabIndex = 1;
+            this.plansComboBox.ValueMember = "Id";
             // 
             // planContentDataGridView
             // 
@@ -260,31 +289,13 @@
             this.planContentDataGridView.DataSource = this.planContentBindingSource;
             this.planContentDataGridView.Location = new System.Drawing.Point(12, 28);
             this.planContentDataGridView.Name = "planContentDataGridView";
-            this.planContentDataGridView.Size = new System.Drawing.Size(758, 272);
-            this.planContentDataGridView.TabIndex = 1;
-            // 
-            // plansBindingSource
-            // 
-            this.plansBindingSource.DataMember = "Plans";
-            this.plansBindingSource.DataSource = this.educationalDepartmentDataSet;
-            // 
-            // plansTableAdapter
-            // 
-            this.plansTableAdapter.ClearBeforeFill = true;
-            // 
-            // subjectsBindingSource
-            // 
-            this.subjectsBindingSource.DataMember = "Subjects";
-            this.subjectsBindingSource.DataSource = this.educationalDepartmentDataSet;
-            // 
-            // subjectsTableAdapter
-            // 
-            this.subjectsTableAdapter.ClearBeforeFill = true;
+            this.planContentDataGridView.Size = new System.Drawing.Size(757, 305);
+            this.planContentDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "PlanId";
-            this.dataGridViewTextBoxColumn2.DataSource = this.plansBindingSource;
+            this.dataGridViewTextBoxColumn2.DataSource = this.plansBindingSource1;
             this.dataGridViewTextBoxColumn2.DisplayMember = "Speciality";
             this.dataGridViewTextBoxColumn2.HeaderText = "Специальность";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -292,6 +303,11 @@
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn2.ValueMember = "Id";
             this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // plansBindingSource1
+            // 
+            this.plansBindingSource1.DataMember = "Plans";
+            this.plansBindingSource1.DataSource = this.educationalDepartmentDataSet;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -304,6 +320,11 @@
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "Id";
             this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // subjectsBindingSource
+            // 
+            this.subjectsBindingSource.DataMember = "Subjects";
+            this.subjectsBindingSource.DataSource = this.educationalDepartmentDataSet;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -338,19 +359,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 312);
+            this.ClientSize = new System.Drawing.Size(1023, 345);
             this.Controls.Add(this.planContentDataGridView);
-            this.Controls.Add(this.planContentBindingNavigator);
+            this.Controls.Add(this.plansComboBox);
+            this.Controls.Add(this.plansBindingNavigator);
             this.Name = "PlanContentForm";
             this.Text = "План";
             this.Load += new System.EventHandler(this.PlanContentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.educationalDepartmentDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingNavigator)).EndInit();
-            this.planContentBindingNavigator.ResumeLayout(false);
-            this.planContentBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansBindingNavigator)).EndInit();
+            this.plansBindingNavigator.ResumeLayout(false);
+            this.plansBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planContentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
