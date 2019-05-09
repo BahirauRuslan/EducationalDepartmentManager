@@ -108,6 +108,7 @@
             this.markButton.TabIndex = 5;
             this.markButton.Text = "Оценки";
             this.markButton.UseVisualStyleBackColor = true;
+            this.markButton.Click += new System.EventHandler(this.MarkButton_Click);
             // 
             // MainFrom
             // 

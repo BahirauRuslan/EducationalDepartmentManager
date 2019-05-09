@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DepartmentManager
@@ -50,6 +43,11 @@ namespace DepartmentManager
         private void StudentButton_Click(object sender, EventArgs e)
         {
             this.ShowDialogForm(new StudentsForm());
+        }
+
+        private void MarkButton_Click(object sender, EventArgs e)
+        {
+            this.ShowDialogForm(new MarkRecordsForm());
         }
     }
 }
