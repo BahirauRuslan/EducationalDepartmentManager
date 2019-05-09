@@ -64,6 +64,7 @@
             this.planButton.TabIndex = 1;
             this.planButton.Text = "Планы";
             this.planButton.UseVisualStyleBackColor = true;
+            this.planButton.Click += new System.EventHandler(this.PlanButton_Click);
             // 
             // planContentButton
             // 

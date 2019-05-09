@@ -13,6 +13,7 @@ namespace DepartmentManager
     public partial class MainFrom : Form
     {
         private readonly Lazy<SubjectsForm> _subjectsForm = new Lazy<SubjectsForm>();
+        private readonly Lazy<PlansForm> _plansForm = new Lazy<PlansForm>();
 
         public MainFrom()
         {
@@ -32,6 +33,11 @@ namespace DepartmentManager
         private void SubjectButton_Click(object sender, EventArgs e)
         {
             this.ShowDialogForm(this._subjectsForm.Value);
+        }
+
+        private void PlanButton_Click(object sender, EventArgs e)
+        {
+            this.ShowDialogForm(this._plansForm.Value);
         }
     }
 }
