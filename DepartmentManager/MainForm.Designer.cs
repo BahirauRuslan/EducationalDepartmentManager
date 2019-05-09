@@ -53,6 +53,7 @@
             this.subjectButton.TabIndex = 0;
             this.subjectButton.Text = "Дисциплины";
             this.subjectButton.UseVisualStyleBackColor = true;
+            this.subjectButton.Click += new System.EventHandler(this.SubjectButton_Click);
             // 
             // planButton
             // 
