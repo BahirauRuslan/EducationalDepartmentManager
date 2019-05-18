@@ -27,18 +27,15 @@
         private EducationalDepartmentDataSetTableAdapters.GroupsTableAdapter groupsTableAdapter;
         private System.Windows.Forms.BindingSource groupsBindingSource;
         private EducationalDepartmentDataSetTableAdapters.StudentsTableAdapter studentsTableAdapter;
-        private System.Windows.Forms.ComboBox groupsComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource studentsBindingSource;
         private EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter planContentTableAdapter;
         private System.Windows.Forms.BindingSource planContentBindingSource;
         private EducationalDepartmentDataSetTableAdapters.SubjectsTableAdapter subjectsTableAdapter;
-        private System.Windows.Forms.DataGridView planContentDataGridView;
         private System.Windows.Forms.BindingSource plansBindingSource1;
         private System.Windows.Forms.BindingSource subjectsBindingSource;
         private EducationalDepartmentDataSetTableAdapters.MarkRecordsTableAdapter markRecordsTableAdapter;
         private System.Windows.Forms.BindingSource markRecordsBindingSource;
-        private System.Windows.Forms.DataGridView markRecordsDataGridView;
         private System.Windows.Forms.BindingSource planContentBindingSource1;
 
         /// <summary>
@@ -113,6 +110,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.educationalDepartmentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingNavigator)).BeginInit();
@@ -528,11 +526,22 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Visible = false;
             // 
+            // reportButton
+            // 
+            this.reportButton.Location = new System.Drawing.Point(932, 402);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(151, 23);
+            this.reportButton.TabIndex = 9;
+            this.reportButton.Text = "Получить ведомость";
+            this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.ReportButton_Click);
+            // 
             // MarkRecordsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 458);
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.plansDataGridView);
             this.Controls.Add(this.markRecordsDataGridView);
             this.Controls.Add(this.planContentDataGridView);
@@ -579,5 +588,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        public System.Windows.Forms.ComboBox groupsComboBox;
+        public System.Windows.Forms.DataGridView planContentDataGridView;
+        public System.Windows.Forms.DataGridView markRecordsDataGridView;
+        private System.Windows.Forms.Button reportButton;
     }
 }

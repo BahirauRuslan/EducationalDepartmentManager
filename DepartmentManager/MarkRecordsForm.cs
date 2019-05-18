@@ -51,5 +51,14 @@ namespace DepartmentManager
         {
             MessageBox.Show("Не выбран студент или поставлена некорректная оценка", "Ошибка ввода");
         }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            var reportForm = new ReportForm
+            {
+                Owner = this
+            };
+            reportForm.ShowDialog();
+        }
     }
 }
