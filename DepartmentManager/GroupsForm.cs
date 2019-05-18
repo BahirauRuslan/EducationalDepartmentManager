@@ -12,9 +12,16 @@ namespace DepartmentManager
 
         private void PlansBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.plansBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.educationalDepartmentDataSet);
+            try
+            {
+                this.Validate();
+                this.plansBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.educationalDepartmentDataSet);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Номер группы должен состоять из восьми цифр (первая не может быть нулем)", "Ошибка сохранения");
+            }
         }
 
         private void GroupsForm_Load(object sender, EventArgs e)
