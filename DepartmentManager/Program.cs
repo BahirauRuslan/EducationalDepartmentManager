@@ -26,6 +26,7 @@ namespace DepartmentManager
             catch (Exception e)
             {
                 Program.Logger.Error(e.Message);
+                Program.Logger.Error(e.GetType().ToString());
                 Program.Logger.Error(e.StackTrace);
                 MessageBox.Show(e.Message, "Application error");
             }
