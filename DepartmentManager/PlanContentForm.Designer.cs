@@ -24,7 +24,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton plansBindingNavigatorSaveItem;
-        private System.Windows.Forms.ComboBox plansComboBox;
         private EducationalDepartmentDataSetTableAdapters.PlanContentTableAdapter planContentTableAdapter;
         private System.Windows.Forms.BindingSource planContentBindingSource;
         private EducationalDepartmentDataSetTableAdapters.SubjectsTableAdapter subjectsTableAdapter;
@@ -82,7 +81,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.plansBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.plansComboBox = new System.Windows.Forms.ComboBox();
             this.planContentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.plansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -92,6 +90,10 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plansDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.educationalDepartmentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingNavigator)).BeginInit();
@@ -100,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // educationalDepartmentDataSet
@@ -161,7 +164,7 @@
             this.plansBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.plansBindingNavigator.Name = "plansBindingNavigator";
             this.plansBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.plansBindingNavigator.Size = new System.Drawing.Size(1023, 25);
+            this.plansBindingNavigator.Size = new System.Drawing.Size(1078, 25);
             this.plansBindingNavigator.TabIndex = 0;
             this.plansBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -264,17 +267,6 @@
             this.plansBindingNavigatorSaveItem.Text = "Save Data";
             this.plansBindingNavigatorSaveItem.Click += new System.EventHandler(this.PlansBindingNavigatorSaveItem_Click);
             // 
-            // plansComboBox
-            // 
-            this.plansComboBox.DataSource = this.plansBindingSource;
-            this.plansComboBox.DisplayMember = "Speciality";
-            this.plansComboBox.FormattingEnabled = true;
-            this.plansComboBox.Location = new System.Drawing.Point(775, 28);
-            this.plansComboBox.Name = "plansComboBox";
-            this.plansComboBox.Size = new System.Drawing.Size(236, 21);
-            this.plansComboBox.TabIndex = 1;
-            this.plansComboBox.ValueMember = "Id";
-            // 
             // planContentDataGridView
             // 
             this.planContentDataGridView.AutoGenerateColumns = false;
@@ -291,6 +283,7 @@
             this.planContentDataGridView.Name = "planContentDataGridView";
             this.planContentDataGridView.Size = new System.Drawing.Size(757, 305);
             this.planContentDataGridView.TabIndex = 2;
+            this.planContentDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.PlanContentDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -355,13 +348,51 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
+            // plansDataGridView
+            // 
+            this.plansDataGridView.AutoGenerateColumns = false;
+            this.plansDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.plansDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn7});
+            this.plansDataGridView.DataSource = this.plansBindingSource;
+            this.plansDataGridView.Location = new System.Drawing.Point(775, 28);
+            this.plansDataGridView.Name = "plansDataGridView";
+            this.plansDataGridView.Size = new System.Drawing.Size(289, 305);
+            this.plansDataGridView.TabIndex = 4;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Speciality";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Специальность";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Year";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Год";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
             // PlanContentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 345);
+            this.ClientSize = new System.Drawing.Size(1078, 348);
+            this.Controls.Add(this.plansDataGridView);
             this.Controls.Add(this.planContentDataGridView);
-            this.Controls.Add(this.plansComboBox);
             this.Controls.Add(this.plansBindingNavigator);
             this.Name = "PlanContentForm";
             this.Text = "План";
@@ -375,11 +406,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.planContentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plansDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView plansDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }
