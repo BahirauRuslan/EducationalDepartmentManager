@@ -27,10 +27,7 @@
         private EducationalDepartmentDataSetTableAdapters.GroupsTableAdapter groupsTableAdapter;
         private System.Windows.Forms.BindingSource groupsBindingSource;
         private System.Windows.Forms.DataGridView groupsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource plansBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -76,14 +73,14 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.plansBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.plansBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plansDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.educationalDepartmentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plansBindingNavigator)).BeginInit();
@@ -149,7 +146,7 @@
             this.plansBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.plansBindingNavigator.Name = "plansBindingNavigator";
             this.plansBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.plansBindingNavigator.Size = new System.Drawing.Size(692, 25);
+            this.plansBindingNavigator.Size = new System.Drawing.Size(450, 25);
             this.plansBindingNavigator.TabIndex = 0;
             this.plansBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -263,40 +260,13 @@
             this.groupsDataGridView.DataSource = this.groupsBindingSource;
             this.groupsDataGridView.Location = new System.Drawing.Point(12, 28);
             this.groupsDataGridView.Name = "groupsDataGridView";
-            this.groupsDataGridView.Size = new System.Drawing.Size(408, 242);
+            this.groupsDataGridView.Size = new System.Drawing.Size(176, 242);
             this.groupsDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Number";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Номер группы";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PlanId";
-            this.dataGridViewTextBoxColumn3.DataSource = this.plansBindingSource1;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Speciality";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Специальность";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "Id";
             // 
             // plansBindingSource1
             // 
             this.plansBindingSource1.DataMember = "Plans";
             this.plansBindingSource1.DataSource = this.educationalDepartmentDataSet;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // plansDataGridView
             // 
@@ -307,7 +277,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn4});
             this.plansDataGridView.DataSource = this.plansBindingSource;
-            this.plansDataGridView.Location = new System.Drawing.Point(426, 28);
+            this.plansDataGridView.Location = new System.Drawing.Point(194, 28);
             this.plansDataGridView.Name = "plansDataGridView";
             this.plansDataGridView.Size = new System.Drawing.Size(247, 242);
             this.plansDataGridView.TabIndex = 4;
@@ -336,11 +306,39 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Number";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Номер группы";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PlanId";
+            this.dataGridViewTextBoxColumn3.DataSource = this.plansBindingSource1;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "Speciality";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Специальность";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "Id";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
             // GroupsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 278);
+            this.ClientSize = new System.Drawing.Size(450, 278);
             this.Controls.Add(this.plansDataGridView);
             this.Controls.Add(this.groupsDataGridView);
             this.Controls.Add(this.plansBindingNavigator);
@@ -367,5 +365,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
